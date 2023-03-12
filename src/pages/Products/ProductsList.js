@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { ProductCard } from "../../components/Elements/ProductCard";
+import { FilterBar } from "./components/FilterBar";
 
 export const ProductsList = () => {
+  const [show, setShow] = useState(false);
+
   return (
     <main>
       <section className="my-5">
@@ -11,6 +14,7 @@ export const ProductsList = () => {
           </span>
           <span>
             <button
+              onClick={() => setShow(!show)}
               id="dropdownMenuIconButton"
               data-dropdown-toggle="dropdownDots"
               className="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-gray-100 rounded-lg hover:bg-gray-200 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-700"
@@ -31,10 +35,10 @@ export const ProductsList = () => {
 
         <div className="flex flex-wrap justify-center lg:flex-row">
           <ProductCard />
-          <ProductCard />
-          <ProductCard />
         </div>
       </section>
+
+      {show && <FilterBar setShow={setShow} />}
     </main>
   );
 };
