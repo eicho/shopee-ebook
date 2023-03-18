@@ -7,8 +7,8 @@ import { FilterBar } from "./components/FilterBar";
 
 export const ProductsList = () => {
   // const { productList } = useFilter();
+  const { products, initialProductList } = useFilter();
   const [show, setShow] = useState(false);
-  const [products, setProducts] = useState([]);
   const search = useLocation().search;
   // console.log(useLocation());
   // console.log(search);
@@ -25,10 +25,10 @@ export const ProductsList = () => {
         }`
       );
       const data = await response.json();
-      setProducts(data);
+      initialProductList(data);
     }
-    fetchProducts();
-  }, []);
+    fetchProducts(); // eslint-disable-next-line
+  }, [searchTerm]);
 
   return (
     <main>
