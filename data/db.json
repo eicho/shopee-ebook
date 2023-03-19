@@ -238,5 +238,18 @@
     }
   ],
   "orders": [],
-  "users": []
+  "users": [
+    {
+      "email": "admin@example.com",
+      "password": "$2a$10$jwZkkaP6gmxOGuGUtnRS1u/SLjaFChpjGI4lTNp8FxkYmrY/JgLjO",
+      "name": "Admin",
+      "id": 1
+    },
+    {
+      "email": "admin1@gmail.com",
+      "password": "$2a$10$fC8kWePpOQGASwNDxuZa5eMiL2C9li.eDTgxCpLMKoe54SVON1YMG",
+      "name": "admin1",
+      "id": 2
+    }
+  ]
 }
