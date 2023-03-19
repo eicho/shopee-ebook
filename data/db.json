@@ -250,6 +250,12 @@
       "password": "$2a$10$fC8kWePpOQGASwNDxuZa5eMiL2C9li.eDTgxCpLMKoe54SVON1YMG",
       "name": "admin1",
       "id": 2
+    },
+    {
+      "email": "admin1@example.com",
+      "password": "$2a$10$d6FaUL4T//rDK57KIPrxt.aCWTpOT1wCJPJK2ApJA5c.CwmbCtdsS",
+      "name": "Admin1",
+      "id": 3
     }
   ]
 }
