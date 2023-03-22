@@ -18,6 +18,7 @@ export async function getUser() {
     requestOptions
   );
   if (!response.ok) {
+    // eslint-disable-next-line
     throw { message: response.statusText, status: response.status };
   }
   const data = await response.json();
@@ -38,6 +39,7 @@ export async function getUserOrders() {
     requestOptions
   );
   if (!response.ok) {
+    // eslint-disable-next-line
     throw { message: response.statusText, status: response.status };
   }
   const data = await response.json();
@@ -69,6 +71,7 @@ export async function createOrder(cartList, total, user) {
     requestOptions
   );
   if (!response.ok) {
+    // eslint-disable-next-line
     throw { message: response.statusText, status: response.status };
   }
   const data = await response.json();

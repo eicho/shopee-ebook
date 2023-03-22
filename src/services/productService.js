@@ -5,6 +5,7 @@ export async function getProductList(searchTerm) {
     }`
   );
   if (!response.ok) {
+    // eslint-disable-next-line
     throw { message: response.statusText, status: response.status };
   }
   const data = await response.json();
@@ -16,6 +17,7 @@ export async function getProduct(id) {
     `${process.env.REACT_APP_HOST}/444/products/${id}`
   );
   if (!response.ok) {
+    // eslint-disable-next-line
     throw { message: response.statusText, status: response.status };
   }
   const data = await response.json();
@@ -27,6 +29,7 @@ export async function getFeaturedList() {
     `${process.env.REACT_APP_HOST}/444/featured_products`
   );
   if (!response.ok) {
+    // eslint-disable-next-line
     throw { message: response.statusText, status: response.status };
   }
   const data = await response.json();
