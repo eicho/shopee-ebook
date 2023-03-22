@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import { useTitle } from "../hooks/useTitle";
 import { toast } from "react-toastify";
 import { register } from "../services";
 
 export const Register = () => {
+  useTitle("Register");
   const navigate = useNavigate();
 
   async function handleRegister(event) {
